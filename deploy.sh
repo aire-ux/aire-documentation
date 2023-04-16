@@ -10,7 +10,7 @@ npm run src:build
 cd docs
 
 # if you are deploying to a custom domain
-echo 'zephyr-docs.sunshower.io' > CNAME
+echo 'aire.sunshower.io' > CNAME
 
 #git init
 git add -A
@@ -21,6 +21,6 @@ git add -A
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-git push -f git@github.com:sunshower-io/zephyr-documentation.git master:master
+git push -f git@github.com:aire-ux/aire-documentation.git master:master
 
 cd -

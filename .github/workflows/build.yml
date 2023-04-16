@@ -21,7 +21,7 @@ jobs:
       - name: Commit Files
         run: |
           git config --local user.email "build@sunshower.io"
-          git config --local user.name "josiahhaswell"
+          git config --local user.name "lisajgumerman"
           cp CNAME docs/
           git add docs
           git commit -am "Releasing..."
