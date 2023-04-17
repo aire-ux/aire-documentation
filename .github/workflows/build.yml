@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Set up Node 10
+      - name: Set up Node 16
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: '16.x'
       - name: install yarn
         run: npm install yarn -g
       - name: install vuepress
