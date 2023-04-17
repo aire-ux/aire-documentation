@@ -83,17 +83,17 @@ function tree(root) {
 }
 
 module.exports = {
-  title: 'Zephyr',
+  title: 'Aire',
   home: true,
-  description: 'A Java Plugin System for the 21st Century',
+  description: 'A Java Front-End for the 21st Century',
   themeConfig: {
     '/': {
       sidebar: 'auto'
     },
-    logo: '/wind-duotone.svg',
+    logo: '/cubes-stacked-duotone.svg',
     sidebar: tree('src'),
-    repo: 'sunshower-io/zephyr',
-    repoLabel: 'Get Zephyr',
+    repo: 'aire-ux/aire-ux',
+    repoLabel: 'Get Aire',
   },
   dest: 'docs'
 };

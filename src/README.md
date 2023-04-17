@@ -1,17 +1,17 @@
 ---
 home: true
-heroImage: /wind-duotone.svg
+heroImage: /cubes-stacked-duotone.svg
 heroText: Aire 
 tagline: Powerful Modular Java Front-Ends 
 actionText: Get Started →
 actionLink: /getting-started/index.html
 features:
-- title: Lightweight 
-  details: Powerful functionality in a tiny package (<5 MB complete installation).  Reduce startup times by >90%
-- title: Simple
-  details: Testable and deterministic
-- title: Flexible 
-  details: Mix and match technologies and frameworks, or enforce consistency and isolation.  Broad framework support!
+- title: Ergonomic 
+  details: Pull in what you want, where you want, and modify it to the moon
+- title: Testable
+  details: Ensuring fidelity of your front-end has never been so doable
+- title: Open-Source 
+  details: Dedicated to staying open-source forever
   footer: MIT Licensed | Powered by Vaadin | Championed by Sunshower.io | &copy; 2018-present Sunshower.io 
 ---
 
