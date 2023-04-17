@@ -3,8 +3,8 @@ home: true
 heroImage: /cubes-stacked-duotone.svg
 heroText: Aire 
 tagline: Powerful Modular Java Front-Ends 
-actionText: Get Started →
-actionLink: /getting-started/index.html
+actionText: Check it out →
+actionLink: /overview/overview
 features:
 - title: Ergonomic 
   details: Pull in what you want, where you want, and modify it to the moon

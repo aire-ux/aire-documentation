@@ -1,0 +1,11 @@
+{
+  "order": 1,
+  "pages": {
+    "overview": {
+      "order": 0
+    },
+    "getting-started": {
+      "order": 1
+    }
+  }
+}

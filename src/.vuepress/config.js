@@ -14,14 +14,14 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.substr(1);
 }
 
-function sort(files) {
+function sort(path) {
+  const files = glob.sync(`${path}/**/*.md`)
   let orders = [];
-  for (let file of files) {
+  const configuration = readConfigurationWithPath(path)?.pages
 
-    let content = fs.readFileSync(file, "utf8"),
-        frontMatter = fm(content),
-        attrs = frontMatter && frontMatter.attributes,
-        order = attrs && attrs.order;
+  for (let file of files) {
+    const name = file.split('/').pop().split('.').shift()
+    const order = configuration && configuration[name]?.order
     if (order) {
       orders.push({order: order, name: file});
     } else {
@@ -44,12 +44,15 @@ const omit = [
 ];
 
 function readConfiguration(root, directory) {
-  const config = `${root}/${directory}/config.json`;
+  const config = `${root}/${directory}`;
+  return readConfigurationWithPath(config)
+}
+
+function readConfigurationWithPath(path) {
+  const config = `${path}/config.json`;
   if (fs.existsSync(config)) {
     const buffer = fs.readFileSync(config, 'utf-8');
-    let r = JSON.parse(buffer);
-    console.log(r);
-    return r;
+    return JSON.parse(buffer);
   }
   return {
     order: 1000
@@ -72,7 +75,7 @@ function sortDirectories(root, directories) {
 function tree(root) {
   let subdirs = sortDirectories(root, fs.readdirSync(root)),
       subgroups = subdirs.filter(f => omit.indexOf(f) === -1).map(subdir => {
-        let children = sort(glob.sync(`${root}/${subdir}/**/*.md`));
+        let children = sort(`${root}/${subdir}`);
         return {
           title: capitalize(subdir).replace('-', ' '),
           collapsable: !!children.length,
